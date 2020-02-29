@@ -49,7 +49,7 @@ class TitreBancaireDao
             command.Parameters.AddWithValue("@createdBy", titre.CreatedBy);
             command.Parameters.AddWithValue("@dateCreation", titre.DateCreation);
             command.Parameters.AddWithValue("@modifiedBy", titre.ModifiedBy);
-            command.Parameters.AddWithValue("@dateModification1", titre.DateModification);
+            command.Parameters.AddWithValue("@dateModification", titre.DateModification);
 
             adapter.InsertCommand.ExecuteNonQuery();
             transaction.Commit();
@@ -163,7 +163,7 @@ class TitreBancaireDao
         DataSet ds = new DataSet("TitresBancaires");
         try
         {
-            sql = "SELECT idTitreBq,numero,societeName,banqueName,montant,remiseID FROM titresBancaires,clients,banques WHERE echeance >= @du and echeance <=@au and clients.societeID = titresBancaires.societeID and banques.banqueID = titresBancaires.banqueID ";
+            sql = "SELECT idTitreBq,isCheque,numero,societeName,banqueName,montant,remiseID FROM titresBancaires,clients,banques WHERE echeance >= @du and echeance <=@au and clients.societeID = titresBancaires.societeID and banques.banqueID = titresBancaires.banqueID ";
             switch (typeRech)
             {
                 case 0:

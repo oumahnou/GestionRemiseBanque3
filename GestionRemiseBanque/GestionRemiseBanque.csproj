@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="class\serverInst\ServerInstance.cs" />
     <Compile Include="class\TitreBancaire.cs" />
     <Compile Include="class\TitreBancaireDao.cs" />
     <Compile Include="forms\frmListeClients.cs">

@@ -41,6 +41,7 @@
             this.btnImprimer = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clmidTitreBq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSociete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmBanque = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -169,6 +170,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmidTitreBq,
+            this.clmType,
             this.clmNumero,
             this.clmSociete,
             this.clmBanque,
@@ -181,6 +183,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(505, 341);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // clmidTitreBq
             // 
@@ -189,6 +192,12 @@
             this.clmidTitreBq.Name = "clmidTitreBq";
             this.clmidTitreBq.ReadOnly = true;
             this.clmidTitreBq.Visible = false;
+            // 
+            // clmType
+            // 
+            this.clmType.HeaderText = "Type";
+            this.clmType.Name = "clmType";
+            this.clmType.ReadOnly = true;
             // 
             // clmNumero
             // 
@@ -262,6 +271,7 @@
         private System.Windows.Forms.Button btnImprimer;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmidTitreBq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmType;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNumero;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSociete;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmBanque;
